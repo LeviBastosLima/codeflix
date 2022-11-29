@@ -1,10 +1,14 @@
+import uuid
 from datetime import datetime
 from dataclasses import dataclass, field
 from typing import Optional
 
+from src.domain.common.entities import EntityBase
+from src.domain.common.value_objects import UniqueEntityId
 
-@dataclass()
-class Category:
+
+@dataclass(kw_only=True, frozen=True)
+class Category(EntityBase):
     name: str
     description: Optional[str] = field(default=None)
     is_active: Optional[bool] = field(default=True)
