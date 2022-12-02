@@ -6,7 +6,7 @@ from dataclasses import dataclass, field, fields
 from src.domain.common.exceptions import InvalidUuiException
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class ValueObject(ABC):
     def __str__(self) -> str:
         fields_name = [field_object.name for field_object in fields(self)]
