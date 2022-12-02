@@ -1,0 +1,38 @@
+[[package]]
+name = "autopep8"
+version = "2.0.0"
+summary = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
+dependencies = [
+    "pycodestyle>=2.9.1",
+    "tomli",
+]
+
+[[package]]
+name = "pycodestyle"
+version = "2.10.0"
+requires_python = ">=3.6"
+summary = "Python style guide checker"
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+requires_python = ">=3.7"
+summary = "A lil' TOML parser"
+
+[metadata]
+lock_version = "4.0"
+content_hash = "sha256:f13c2161cc2b4c388f5317d149a91018f7524b40100a63143eec7ae40f84546e"
+
+[metadata.files]
+"autopep8 2.0.0" = [
+    {url = "https://files.pythonhosted.org/packages/2a/c0/a1372bd95578778aae8dc5359e4f8ec03a94479d2f36e30543298d30c48a/autopep8-2.0.0-py2.py3-none-any.whl", hash = "sha256:ad924b42c2e27a1ac58e432166cc4588f5b80747de02d0d35b1ecbd3e7d57207"},
+    {url = "https://files.pythonhosted.org/packages/ac/71/48b7fde78ef09f4636a9b81f926b879d0230f90768483c441f22059d2474/autopep8-2.0.0.tar.gz", hash = "sha256:8b1659c7f003e693199f52caffdc06585bb0716900bbc6a7442fd931d658c077"},
+]
+"pycodestyle 2.10.0" = [
+    {url = "https://files.pythonhosted.org/packages/06/6b/5ca0d12ef7dcf7d20dfa35287d02297f3e0f9e515da5183654c03a9636ce/pycodestyle-2.10.0.tar.gz", hash = "sha256:347187bdb476329d98f695c213d7295a846d1152ff4fe9bacb8a9590b8ee7053"},
+    {url = "https://files.pythonhosted.org/packages/a2/54/001fdc0d69e8d0bb86c3423a6fa6dfada8cc26317c2635ab543e9ac411bd/pycodestyle-2.10.0-py2.py3-none-any.whl", hash = "sha256:8a4eaf0d0495c7395bdab3589ac2db602797d76207242c17d470186815706610"},
+]
+"tomli 2.0.1" = [
+    {url = "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
+    {url = "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
+]

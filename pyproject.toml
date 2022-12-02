@@ -1,0 +1,22 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Levi Bastos", email = "lebaliro5@gmail.com"},
+]
+dependencies = [
+]
+requires-python = ">=3.10.5"
+license = {text = "MIT"}
+[project.optional-dependencies]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "autopep8>=2.0.0",
+]
