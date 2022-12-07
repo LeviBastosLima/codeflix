@@ -19,7 +19,19 @@ class TestEntityUnit(unittest.TestCase):
     def test_if_is_a_abstract_class(self):
         self.assertIsInstance(EntityBase(), ABC)
 
-    def test_set_id_and_props(self):
+    def test_to_dict(self):
+        prop1 = 'value1'
+        prop2 = 'value2'
+
+        stub_entity = StubEntity(prop1=prop1, prop2=prop2)
+
+        stub_entity_dict = stub_entity.to_dict()
+        stub_entity_dict.pop('id')
+
+        expect_stub_entity_dict = {'prop1': 'value1', 'prop2': 'value2'}
+        self.assertEqual(expect_stub_entity_dict, stub_entity_dict)
+
+    def test_set_attributes(self):
         prop1 = 'value1'
         prop2 = 'value2'
 
