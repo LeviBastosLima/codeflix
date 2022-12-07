@@ -1,5 +1,6 @@
 from abc import ABC
 from dataclasses import dataclass, field, asdict
+from typing import Any
 
 from src.domain.common.value_objects import UniqueEntityId
 
@@ -19,3 +20,6 @@ class EntityBase(ABC):
         entity_dict.pop('unique_entity_id')
         entity_dict['id'] = self.id
         return entity_dict
+
+    def _set(self, name: str, value: Any):
+        object.__setattr__(self, name, value)
