@@ -19,4 +19,5 @@ build-backend = "pdm.pep517.api"
 [tool.pdm.dev-dependencies]
 dev = [
     "autopep8>=2.0.0",
+    "coverage>=6.5.0",
 ]
