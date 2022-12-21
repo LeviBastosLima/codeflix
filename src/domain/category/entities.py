@@ -2,6 +2,7 @@ from datetime import datetime
 from dataclasses import dataclass, field
 from typing import Optional
 
+from domain.common.validators import ValidatorRules
 from src.domain.common.entities import EntityBase
 
 
@@ -12,7 +13,17 @@ class Category(EntityBase):
     is_active: Optional[bool] = field(default=True)
     created_at: datetime = field(default_factory=lambda: datetime.now())
 
+    def __new__(cls, **kwargs):
+        cls.validate(
+            name=kwargs.get('name'),
+            description=kwargs.get('description'),
+            is_active=kwargs.get('is_active')
+        )
+
+        return super(Category, cls).__new__(cls)
+
     def update(self, name: str, description: str) -> None:
+        self.validate(name, description)
         self._set('name', name)
         self._set('description', description)
 
@@ -21,3 +32,9 @@ class Category(EntityBase):
 
     def deactivate(self) -> None:
         self._set('is_active', False)
+
+    @classmethod
+    def validate(cls, name: str, description: str, is_active: bool = None):
+        ValidatorRules(name, 'name').required().string().max_length(max_length=255)
+        ValidatorRules(description, 'description').string()
+        ValidatorRules(is_active, 'is_active').boolean()
